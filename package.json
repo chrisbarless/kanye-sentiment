@@ -1,0 +1,19 @@
+{
+  "name": "kanye-sentiment",
+  "version": "0.0.0",
+  "description": "kanye-sentiment ===============",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/chrisbarless/kanye-sentiment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrisbarless/kanye-sentiment/issues"
+  },
+  "homepage": "https://github.com/chrisbarless/kanye-sentiment"
+}
