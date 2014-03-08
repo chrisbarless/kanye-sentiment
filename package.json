@@ -21,7 +21,10 @@
     "express": "3.x",
     "jade": "0.x",
     "mongoose": "3.x",
-    "implementjs": "0.1.x"
+    "implementjs": "0.1.x",
+    "sentiment": "^0.2.1",
+    "lodash": "^2.4.1",
+    "twit": "^1.1.12"
   },
   "devDependencies": {
     "grunt": "^0.4.3",
