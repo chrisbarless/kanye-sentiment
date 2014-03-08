@@ -15,5 +15,17 @@
   "bugs": {
     "url": "https://github.com/chrisbarless/kanye-sentiment/issues"
   },
-  "homepage": "https://github.com/chrisbarless/kanye-sentiment"
+  "homepage": "https://github.com/chrisbarless/kanye-sentiment",
+  "dependencies": {
+    "debug": "0.x",
+    "express": "3.x",
+    "jade": "0.x",
+    "mongoose": "3.x",
+    "implementjs": "0.1.x"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.3",
+    "grunt-contrib-sass": "^0.7.3",
+    "grunt-contrib-watch": "^0.5.3"
+  }
 }
