@@ -1,7 +1,7 @@
 {
   "name": "kanye-sentiment",
   "version": "0.0.0",
-  "description": "kanye-sentiment ===============",
+  "description": "kanye-sentiment",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

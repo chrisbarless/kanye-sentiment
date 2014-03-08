@@ -7,6 +7,6 @@ var debug = require('debug')('app'),
 require('./lib/router')(server, handler);
 
 // All set, start listening!
-var port = 3000;
+var port = 5000;
 server.listen(port);
 debug("Express server listening on port %d in %s mode", port, process.env.NODE_ENV);
