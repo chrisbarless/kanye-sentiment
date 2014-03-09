@@ -1,0 +1,21 @@
+{
+  "name": "kanye-sentiment",
+  "version": "0.0.0",
+  "homepage": "https://github.com/chrisbarless/kanye-sentiment",
+  "authors": [
+    "chrisbarless <chrisbarless@gmail.com>"
+  ],
+  "main": "public/js/scripts.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.0"
+  }
+}

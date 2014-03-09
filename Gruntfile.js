@@ -12,11 +12,11 @@ module.exports = function(grunt){
         livereload: true
       },
       css: {
-        files: '**/*.scss',
+        files: 'public/**/*.scss',
         tasks: ['sass']
       },
       js: {
-        files: '**/*.js'
+        files: 'public/**/*.js'
       },
       html: {
         files: 'views/index.ejs'
