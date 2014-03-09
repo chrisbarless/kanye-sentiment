@@ -7,9 +7,10 @@
 			width: $(window).width(),
 			height: $(window).height()
 		};
-    this._mood = 1;
+    this._mood = 100;
     this.setMood = function(mood){
-      if (mood === 0) mood = 1;
+      if (mood <= 0) mood = 1;
+      if (mood > 100) mood = 100;
       this._animate(this._mood, mood);
       this._mood = mood;
       console.debug('Mood set to %d', mood);
@@ -52,7 +53,7 @@
 		this.init = function(){
 			var str = wSize.width * 50 + 'px ' + wSize.height + 'px';
 			$el.css('background-size', str);
-      this.setMood(1);
+      this._setFrame(0);
 			return true;
 		};
     this.init();
