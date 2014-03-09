@@ -1,4 +1,4 @@
-(function($, undefined){
+(function($, _, undefined){
 	var backgroundController = function backgroundController(){
 		var size, wSize, el;
 		$el = $('body');
@@ -23,8 +23,8 @@
       var klass = this;
       var delay = 0;
       gap = gap / 10;
-      if (direction === 'down'){
-        for (var i = start; i < stop; i += gap) {
+      if (direction === 'up'){
+        for (var i = start; i > stop; i -= gap) {
           i = Math.floor(i);
           setTimeout(function(mood){
             klass._setFrame(mood)
@@ -32,7 +32,7 @@
           delay += 100;
         };
       } else {
-        for (var i = start; i > stop; i -= gap) {
+        for (var i = start; i < stop; i += gap) {
           i = Math.floor(i);
           setTimeout(function(mood){
             klass._setFrame(mood)
@@ -63,4 +63,4 @@
 	$(function(){
 		window.BackgroundC = new backgroundController();
 	});
-})($);
+})(jQuery, _);
