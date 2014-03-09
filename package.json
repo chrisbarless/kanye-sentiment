@@ -19,12 +19,12 @@
   "dependencies": {
     "debug": "0.x",
     "express": "3.x",
-    "jade": "0.x",
     "mongoose": "3.x",
     "implementjs": "0.1.x",
     "sentiment": "^0.2.1",
     "lodash": "^2.4.1",
-    "twit": "^1.1.12"
+    "twit": "^1.1.12",
+    "ejs": "^0.8.5"
   },
   "devDependencies": {
     "grunt": "^0.4.3",
