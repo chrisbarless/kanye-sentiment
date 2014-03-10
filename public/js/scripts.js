@@ -1,3 +1,5 @@
+window.App = window.App || {};
+
 (function($, _, undefined){
 	var backgroundController = function backgroundController(){
 		var size, wSize, el;
@@ -61,6 +63,6 @@
 	};
 
 	$(function(){
-		window.BackgroundC = new backgroundController();
+		window.App.Background = new backgroundController();
 	});
 })(jQuery, _);
