@@ -94,7 +94,7 @@
           setTimeout(function(mood){
             self._setFrame(mood);
           }, delay, i);
-          delay += 100;
+          delay += 200;
         };
       } else {
         for (var i = start; i < stop; i += gap) {
@@ -102,7 +102,7 @@
           setTimeout(function(mood){
             self._setFrame(mood);
           }, delay, i);
-          delay += 100;
+          delay += 200;
         };
       }
     };
@@ -165,7 +165,7 @@
       setTimeout(function(){
         App.nextTweet();
         advanceTweet();
-      }, 5000);
+      }, 5500);
     };
     advanceTweet();
   });
