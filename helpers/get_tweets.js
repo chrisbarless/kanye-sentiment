@@ -12,8 +12,8 @@ var writeTweets = function(){
     if (err) throw err;
     if (data.statuses.length === 0) return false;
     tweets = _.pluck(data.statuses, 'text').join('|SPLIT|');
-    fs.writeFileSync(tweetFile, tweets, { encoding: encoding });
-    console.log('Wrote %d tweets', tweets.length);
+    fs.appendFileSync(tweetFile, tweets, { encoding: encoding });
+    console.log('Wrote %d tweets', data.statuses.length);
   });
 };
 
