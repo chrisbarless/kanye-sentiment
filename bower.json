@@ -18,6 +18,8 @@
   "dependencies": {
     "jquery": "~2.1.0",
     "lodash": "~2.4.1",
-    "Chart.js": "*"
+    "Chart.js": "*",
+    "underscore": "~1.6.0",
+    "backbone": "~1.1.2"
   }
 }

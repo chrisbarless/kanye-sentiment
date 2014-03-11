@@ -1,10 +1,8 @@
 @import 'reset';
-
-h1{
-	font-family: sans-serif;
-	color: white;
-	text-shadow: 3px 3px 10px black;
-	text-align: center;
+html, body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 .frames{
     display: none;
@@ -16,5 +14,39 @@ h1{
     }
     .frame{
         float: left;
+    }
+}
+@mixin transparent_bg{
+    background: rgba(255,255,255,0.6);
+    font-family: monospace;
+}
+.tweet-data{
+    position: fixed;
+    bottom: 2em;
+    left: 2em;
+    padding: .5em;
+    font-family: monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    @include transparent_bg;
+    .bold{
+        font-weight: bold;
+    }
+}
+.tweet-display{
+    $width: 500px;
+    $height: 2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: $width;
+    height: $height;
+    margin-top: -($height / 2);
+    margin-left: -($width / 2);
+    font-weight: bold;
+    p{
+        @include transparent_bg;
+        padding: 1em;
+        line-height: 1.5;
     }
 }
