@@ -165,7 +165,7 @@
       setTimeout(function(){
         App.nextTweet();
         advanceTweet();
-      }, 6000);
+      }, 5000);
     };
     advanceTweet();
   });
