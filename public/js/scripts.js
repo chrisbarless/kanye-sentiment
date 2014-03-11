@@ -85,14 +85,14 @@
       if (start === stop) return false;
       var direction = start > stop ? 'up' : 'down';
       var gap = (direction === 'up' ? start - stop : stop - start);
-      var klass = this;
+      var self = this;
       var delay = 0;
       gap = gap / 10;
       if (direction === 'up'){
         for (var i = start; i > stop; i -= gap) {
           i = Math.floor(i);
           setTimeout(function(mood){
-            klass._setFrame(mood)
+            self._setFrame(mood);
           }, delay, i);
           delay += 100;
         };
@@ -100,7 +100,7 @@
         for (var i = start; i < stop; i += gap) {
           i = Math.floor(i);
           setTimeout(function(mood){
-            klass._setFrame(mood)
+            self._setFrame(mood);
           }, delay, i);
           delay += 100;
         };
@@ -151,7 +151,6 @@
     App.Background = new backgroundController();
 
     App.tweets = new Tweets(window.tweet_data);
-    App.tweets.reset(App.tweets.shuffle(), {silent:true});
     App.nextTweet();
 
     App.tweetData = new TweetData();
@@ -166,7 +165,7 @@
       setTimeout(function(){
         App.nextTweet();
         advanceTweet();
-      }, 7000);
+      }, 6000);
     };
     advanceTweet();
   });
