@@ -29,6 +29,7 @@
   "devDependencies": {
     "grunt": "^0.4.3",
     "grunt-contrib-sass": "^0.7.3",
-    "grunt-contrib-watch": "^0.5.3"
+    "grunt-contrib-watch": "^0.5.3",
+    "canvas": "^1.1.3"
   }
 }

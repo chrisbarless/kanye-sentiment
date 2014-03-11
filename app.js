@@ -1,7 +1,6 @@
 var debug = require('debug')('app'),
 	server = require('./lib/server'),
 	db = require('./lib/db'),
-	tweets = require('./lib/tweets'),
 	handler = require('./lib/handler')(db);
 
 // Setup routes

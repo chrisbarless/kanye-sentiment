@@ -2,13 +2,13 @@ window.App = window.App || {};
 
 (function($, _, undefined){
 	var backgroundController = function backgroundController(){
-		var size, wSize, el;
-		$el = $('body');
-		size = { height: 360, width: 23600 };
-		wSize = {
-			width: $(window).width(),
-			height: $(window).height()
-		};
+		var $frame = $('#frames'),
+    		$frameInner = $('#frame-inner'),
+        $frames = $frameInner.children(),
+    		fSize = {
+    			width: 1180,
+    			height: 902
+    		};
     this._mood = 100;
     this.setMood = function(mood){
       if (mood <= 0) mood = 1;
@@ -47,15 +47,35 @@ window.App = window.App || {};
       var frame;
       frame = Math.abs(mood - 100) / 2;
       frame = Math.floor(frame);
-      var offset = -frame * wSize.width;
-      $el.css('background-position-x', offset);
+      console.log(frame);
+      var offset = -frame * fSize.width;
+      $frameInner.css('left', offset);
       console.debug('Offset set to %d', offset);
       return true;
     };
 		this.init = function(){
-			var str = wSize.width * 50 + 'px ' + wSize.height + 'px';
-			$el.css('background-size', str);
-      this._setFrame(0);
+      var newWidth, newHeight, tString;
+      newWidth = $(window).width() / fSize.width,
+      newHeight = $(window).height() / fSize.height,
+      tString = 'scale(' + newWidth + ', ' + newHeight + ')';
+      $frameInner.css({
+        'width': fSize.width * $frames.length,
+        'height': fSize.height
+      });
+      $frames.css({
+        'width': fSize.width,
+        'height': fSize.height
+      });
+      $frame.css({
+        'width': fSize.width,
+        'height': fSize.height,
+        'transform': tString,
+        '-webkit-transform': tString,
+        '-moz-transform': tString
+      })
+      .fadeIn(2500);
+
+      this._setFrame(1);
 			return true;
 		};
     this.init();

@@ -1,11 +1,20 @@
-body{
-	background: url('../img/kanye-strip.jpg');
-	background-size: cover;
-	background-position: 0 0;
-}
+@import 'reset';
+
 h1{
 	font-family: sans-serif;
 	color: white;
 	text-shadow: 3px 3px 10px black;
 	text-align: center;
+}
+.frames{
+    display: none;
+    font: 9px/5px monospace;
+    -webkit-transform-origin: 0 0;
+    overflow: hidden;
+    .inner{
+        position: relative;
+    }
+    .frame{
+        float: left;
+    }
 }
