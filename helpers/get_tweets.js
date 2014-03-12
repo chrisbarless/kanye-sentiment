@@ -4,12 +4,7 @@ var fs = require('fs'),
   tweetFile = 'tweets.txt',
   encoding = 'utf8';
 
-var T = new Twit({
-    consumer_key: process.env.CONSUMER_KEY,
-    consumer_secret: process.env.CONSUMER_SECRET,
-    access_token: process.env.ACCESS_TOKEN,
-    access_token_secret: process.env.ACCESS_TOKEN_SECRET
-});
+var T = new Twit(require('../twitconfig'));
 var writeTweets = function(){
   var searchParams = {q: "kanye", count: 100, result_type: "mixed"};
   T.get('search/tweets', searchParams, function(err, data) {
@@ -27,10 +22,9 @@ var writeTweets = function(){
         return tweet.text;
       })
       .value();
-    fs.writeFileSync(tweetFile, JSON.stringify(tweets), { encoding: encoding });
+    fs.appendFileSync(tweetFile, JSON.stringify(tweets) + '\n', { encoding: encoding });
     console.log('Wrote %d tweets', tweets.length);
   });
 };
 
 writeTweets();
-process.exit();
