@@ -44,11 +44,13 @@ table {
 html, body {
   height: 100%;
   width: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  font-family: monospace; }
 
 .frames {
   display: none;
-  font: 9px/5px monospace;
+  font-size: 9px;
+  line-height: 5px;
   -webkit-transform-origin: 0 0;
   overflow: hidden; }
   .frames .inner {
@@ -64,8 +66,7 @@ html, body {
   font-family: monospace;
   font-size: 14px;
   text-transform: uppercase;
-  background: rgba(255, 255, 255, 0.6);
-  font-family: monospace; }
+  background: rgba(255, 255, 255, 0.6); }
   .tweet-data .bold {
     font-weight: bold; }
 
@@ -79,8 +80,7 @@ html, body {
   font-weight: bold;
   font-size: 14px;
   padding: 1em;
-  background: rgba(255, 255, 255, 0.6);
-  font-family: monospace; }
+  background: rgba(255, 255, 255, 0.6); }
   .tweet-display p {
     line-height: 1.5; }
 
@@ -93,8 +93,7 @@ html, body {
   bottom: 20px;
   right: 2em;
   padding: 1em;
-  background: rgba(255, 255, 255, 0.6);
-  font-family: monospace; }
+  background: rgba(255, 255, 255, 0.6); }
 
 .social {
   position: fixed;

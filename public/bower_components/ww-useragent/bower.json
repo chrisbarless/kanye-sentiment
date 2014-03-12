@@ -1,0 +1,10 @@
+{
+  "name": "ww-useragent",
+  "version": "0.0.0",
+  "main": "useragent.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ]
+}

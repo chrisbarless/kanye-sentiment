@@ -1,0 +1,21 @@
+{
+  "name": "ww-useragent",
+  "version": "0.0.0",
+  "main": "useragent.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "homepage": "https://github.com/Instrument/ww-useragent",
+  "_release": "0.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.0",
+    "commit": "5e4331d8fc1a1b5e2624d5be806507d5bfbd05f0"
+  },
+  "_source": "git://github.com/Instrument/ww-useragent.git",
+  "_target": "~0.0.0",
+  "_originalSource": "ww-useragent",
+  "_direct": true
+}
