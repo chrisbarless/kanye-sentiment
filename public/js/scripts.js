@@ -167,6 +167,6 @@
         advanceTweet();
       }, 5500);
     };
-    //advanceTweet();
+    advanceTweet();
   });
 })(jQuery, _, Backbone);
