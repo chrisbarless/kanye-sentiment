@@ -1,3 +1,4 @@
 #!/usr/bin/env node
-require('helpers/get_tweets');
+var cwd = process.cwd();
+require(cwd + '/helpers/get_tweets');
 exit();
