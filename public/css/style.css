@@ -64,7 +64,7 @@ html, body {
   font-family: monospace;
   font-size: 14px;
   text-transform: uppercase;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.6);
   font-family: monospace; }
   .tweet-data .bold {
     font-weight: bold; }
@@ -74,15 +74,14 @@ html, body {
   top: 50%;
   left: 50%;
   width: 500px;
-  height: 2em;
-  margin-top: -0.66667em;
+  margin-top: -20px;
   margin-left: -250px;
   font-weight: bold;
-  font-size: 14px; }
+  font-size: 14px;
+  padding: 1em;
+  background: rgba(255, 255, 255, 0.6);
+  font-family: monospace; }
   .tweet-display p {
-    background: rgba(255, 255, 255, 0.7);
-    font-family: monospace;
-    padding: 1em;
     line-height: 1.5; }
 
 .social {

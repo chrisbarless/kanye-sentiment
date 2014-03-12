@@ -49,7 +49,7 @@
     id: 'tweet-display',
     className: 'tweet-display',
     template: _.template(
-      '<p><%= text %></p>'
+      '<p class="tweet"><%= text %></p>'
     )
   });
 
@@ -90,7 +90,7 @@
       gap = gap / 10;
       if (direction === 'up'){
         for (var i = start; i > stop; i -= gap) {
-          i = Math.floor(i);
+          i = Math.ceil(i);
           setTimeout(function(mood){
             self._setFrame(mood);
           }, delay, i);
@@ -98,7 +98,7 @@
         };
       } else {
         for (var i = start; i < stop; i += gap) {
-          i = Math.floor(i);
+          i = Math.ceil(i);
           setTimeout(function(mood){
             self._setFrame(mood);
           }, delay, i);
@@ -167,6 +167,6 @@
         advanceTweet();
       }, 5500);
     };
-    advanceTweet();
+    //advanceTweet();
   });
 })(jQuery, _, Backbone);
