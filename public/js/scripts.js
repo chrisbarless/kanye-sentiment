@@ -137,6 +137,7 @@
       var gap = (direction === 'up' ? start - stop : stop - start);
       var self = this;
       var delay = 0;
+      var iterations = 0;
       gap = gap / 10;
       if (direction === 'up'){
         for (var i = start; i > stop; i -= gap) {
@@ -145,6 +146,7 @@
             self._setFrame(mood);
           }, delay, i);
           delay += 200;
+          if (iterations++ > 10) break;
         };
       } else {
         for (var i = start; i < stop; i += gap) {
@@ -153,6 +155,7 @@
             self._setFrame(mood);
           }, delay, i);
           delay += 200;
+          if (iterations++ > 10) break;
         };
       }
     };
