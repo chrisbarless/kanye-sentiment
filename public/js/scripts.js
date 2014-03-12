@@ -132,7 +132,7 @@
       return true;
     };
     this._animate = function(start, stop){
-      if (start === stop) return false;
+      if (start == stop) return false;
       var direction = start > stop ? 'up' : 'down';
       var gap = (direction === 'up' ? start - stop : stop - start);
       var self = this;
@@ -217,10 +217,11 @@
     );
 
     var advanceTweet = function(){
+      var seed = 1.2 - (Math.random() * 0.2);
       setTimeout(function(){
         App.nextTweet();
         advanceTweet();
-      }, 5500);
+      }, 5500 * seed);
     };
     advanceTweet();
 
