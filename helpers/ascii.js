@@ -62,7 +62,7 @@ for (var i = 9; i <= 58; i++) {
   newCanvas();
 };
 
-fs.writeFileSync(__dirname + '/../frames.dat', frames.join('|'), {
+fs.writeFileSync(__dirname + '/../frames.txt', frames.join('|'), {
   'encoding': 'utf8'
 });
 
