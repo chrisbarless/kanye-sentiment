@@ -71,9 +71,9 @@
         labels: ['', '', '', '', ''],
         datasets : [
           {
-            fillColor : "rgba(22,22,22,0.1)",
+            fillColor : "rgba(22,22,22,0.2)",
             strokeColor : "rgba(100,100,100,0.2)",
-            pointColor : "rgba(220,220,220,0.2)",
+            pointColor : "rgba(220,220,220,0.4)",
             pointStrokeColor : "#444",
             data : this.data
           }
@@ -223,5 +223,10 @@
       }, 5500);
     };
     advanceTweet();
+
+    var throttledResize = _.debounce(function(){
+      App.Background.init();
+    }, 500, false);
+    $(window).on('resize', throttledResize);
   });
 })(jQuery, _, Backbone);
