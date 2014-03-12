@@ -1,0 +1,3 @@
+#! /app/bin/node
+require('helpers/get_tweets');
+exit();
