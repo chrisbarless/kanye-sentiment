@@ -24,7 +24,7 @@
       });
     },
     nextTweet: function(){
-      if (! App.tweets.currentTweet){
+      if (! App.tweets.currentTweet || App.tweets.currentTweet === App.tweets.length - 1){
         App.tweets.currentTweet = 0;
       }
       this.setModel(App.tweets.at(App.tweets.currentTweet++));
@@ -40,7 +40,55 @@
         this.setModel(App.model);
         this.render();
       });
-      this.render();
+    }
+  });
+
+  var ChartView = BaseView.extend({
+    'tagName': 'canvas',
+    'id': 'chart',
+    'className': 'chart-canvas',
+    'attributes': {
+      'height': 150,
+      'width': 250
+    },
+    initialize: function(){
+      this.ctx = this.el.getContext("2d");
+      this.data = [];
+      this.addScore();
+      this.listenTo(App, 'changeTweet', function(){
+        if (this.data.length >= 5) this.data.shift();
+        this.addScore();
+        this.render();
+      });
+    },
+    addScore: function(){
+      this.data.push(App.model.get('score'));
+    },
+    render: function(){
+      this.chart = new Chart(this.ctx).Line({
+        labels: ['', '', '', '', ''],
+        datasets : [
+          {
+            fillColor : "rgba(22,22,22,0.1)",
+            strokeColor : "rgba(100,100,100,0.3)",
+            pointColor : "rgba(220,220,220,0.3)",
+            pointStrokeColor : "#444",
+            data : this.data
+          }
+        ]
+      }, {
+        scaleOverride: true,
+        scaleFontFamily: 'monospace',
+        scaleFontSize: 10,
+        animation: false,
+        scaleSteps: 11,
+        scaleStartValue: -12,
+        scaleStepWidth: 2,
+        pointDotRadius: 1,
+        pointDot: false,
+        pointDotStrokeWidth: 0
+      });
+      return this;
     }
   });
 
@@ -134,13 +182,14 @@
         'transform': tString,
         '-webkit-transform': tString,
         '-moz-transform': tString
-      })
-      .fadeIn(2500);
+      }).fadeIn(2500);
 
-      this._setFrame(1);
       return true;
     };
     this.init();
+    this._setFrame(1);
+    $frame.fadeIn(2500);
+
     return true;
   };
 
@@ -155,10 +204,14 @@
 
     App.tweetData = new TweetData();
     App.tweetDisplay = new TweetDisplay();
+    App.chart = new ChartView();
 
     $('body').append(
       App.tweetData.render().el,
       App.tweetDisplay.render().el
+    );
+    $('.chart-canvas-wrap').append(
+      App.chart.render().el
     );
 
     var advanceTweet = function(){
