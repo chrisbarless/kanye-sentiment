@@ -1,5 +1,10 @@
 @import 'reset';
 $body-padding: 2em;
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
 html, body{
     height: 100%;
     width: 100%;
@@ -54,7 +59,7 @@ html, body{
     }
 }
 .chart-canvas-wrap{
-    $height: 130px;
+    $height: 160px;
     $width: 250px;
     height: $height;
     width: $width;
@@ -82,5 +87,32 @@ html, body{
         &:hover{
             opacity: 1;
         }
+    }
+}
+@media only screen and (max-device-width: 600px){
+    .tweet-display{
+        top: $body-padding;
+        left: $body-padding;
+        right: $body-padding;
+        width: auto;
+        margin: 0;
+    }
+    .chart-canvas-wrap{
+        bottom: 140px;
+        left: 50%;
+        margin-left: -125px;
+    }
+    .tweet-data{
+        left: 50%;
+        width: 70%;
+        margin-left: -35%;
+        text-align: center;
+    }
+    .social{
+        text-align: center;
+        width: 100%;
+        bottom: 1em;
+        left: 0;
+        right: 0;
     }
 }

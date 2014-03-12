@@ -41,6 +41,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
 html, body {
   height: 100%;
   width: 100%;
@@ -87,7 +92,7 @@ html, body {
     line-height: 1.5; }
 
 .chart-canvas-wrap {
-  height: 130px;
+  height: 160px;
   width: 250px;
   overflow: hidden;
   position: fixed;
@@ -112,3 +117,29 @@ html, body {
     -moz-transition: .2s all; }
     .social a:hover {
       opacity: 1; }
+
+@media only screen and (max-device-width: 600px) {
+  .tweet-display {
+    top: 2em;
+    left: 2em;
+    right: 2em;
+    width: auto;
+    margin: 0; }
+
+  .chart-canvas-wrap {
+    bottom: 140px;
+    left: 50%;
+    margin-left: -125px; }
+
+  .tweet-data {
+    left: 50%;
+    width: 70%;
+    margin-left: -35%;
+    text-align: center; }
+
+  .social {
+    text-align: center;
+    width: 100%;
+    bottom: 1em;
+    left: 0;
+    right: 0; } }
