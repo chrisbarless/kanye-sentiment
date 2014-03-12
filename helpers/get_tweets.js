@@ -33,5 +33,4 @@ var writeTweets = function(){
 };
 
 writeTweets();
-
-module.exports = {};
+process.exit();
