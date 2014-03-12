@@ -22,7 +22,7 @@ var writeTweets = function(){
         return tweet.text;
       })
       .value();
-    fs.appendFileSync(tweetFile, JSON.stringify(tweets) + '\n', { encoding: encoding });
+    fs.appendFileSync(tweetFile, '\n' + JSON.stringify(tweets), { encoding: encoding });
     console.log('Wrote %d tweets', tweets.length);
   });
 };
