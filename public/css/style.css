@@ -58,13 +58,13 @@ html, body {
 
 .tweet-data {
   position: fixed;
-  bottom: 2em;
+  bottom: 4em;
   left: 2em;
   padding: .5em;
   font-family: monospace;
-  font-size: 12px;
+  font-size: 14px;
   text-transform: uppercase;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.7);
   font-family: monospace; }
   .tweet-data .bold {
     font-weight: bold; }
@@ -75,11 +75,28 @@ html, body {
   left: 50%;
   width: 500px;
   height: 2em;
-  margin-top: -1em;
+  margin-top: -0.66667em;
   margin-left: -250px;
-  font-weight: bold; }
+  font-weight: bold;
+  font-size: 14px; }
   .tweet-display p {
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.7);
     font-family: monospace;
     padding: 1em;
     line-height: 1.5; }
+
+.social {
+  position: fixed;
+  bottom: 12px;
+  left: 23px; }
+  .social a {
+    color: black;
+    margin-left: .2em;
+    line-height: 30px;
+    font-size: 30px;
+    opacity: .5;
+    transition: .2s all;
+    -webkit-transition: .2s all;
+    -moz-transition: .2s all; }
+    .social a:hover {
+      opacity: 1; }

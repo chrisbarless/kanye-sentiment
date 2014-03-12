@@ -1,4 +1,5 @@
 @import 'reset';
+$body-padding: 2em;
 html, body{
     height: 100%;
     width: 100%;
@@ -17,16 +18,16 @@ html, body{
     }
 }
 @mixin transparent_bg{
-    background: rgba(255,255,255,0.6);
+    background: rgba(255,255,255,0.7);
     font-family: monospace;
 }
 .tweet-data{
     position: fixed;
-    bottom: 2em;
-    left: 2em;
+    bottom: $body-padding * 2;
+    left: $body-padding;
     padding: .5em;
     font-family: monospace;
-    font-size: 12px;
+    font-size: 14px;
     text-transform: uppercase;
     @include transparent_bg;
     .bold{
@@ -41,12 +42,31 @@ html, body{
     left: 50%;
     width: $width;
     height: $height;
-    margin-top: -($height / 2);
+    margin-top: -($height / 3);
     margin-left: -($width / 2);
     font-weight: bold;
+    font-size: 14px;
     p{
         @include transparent_bg;
         padding: 1em;
         line-height: 1.5;
+    }
+}
+.social{
+    position: fixed;
+    bottom: 12px;
+    left: 23px;
+    a{
+        color: black;
+        margin-left: .2em;
+        line-height: 30px;
+        font-size: 30px;
+        opacity: .5;
+        transition: .2s all;
+        -webkit-transition: .2s all;
+        -moz-transition: .2s all;
+        &:hover{
+            opacity: 1;
+        }
     }
 }

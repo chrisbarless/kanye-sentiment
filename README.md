@@ -6,3 +6,4 @@ kanye-sentiment
 - Set up a cron job to get new tweets when appropriate
 - Filter out duplicate/similar tweets
 - Implement a simple graph
+- Add Github / Twitter
