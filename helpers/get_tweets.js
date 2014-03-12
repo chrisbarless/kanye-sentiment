@@ -4,7 +4,7 @@ var fs = require('fs'),
   tweetFile = 'tweets.txt',
   encoding = 'utf8';
 
-var T = new Twit(require('../twitconfig'));
+var T = new Twit(process.cwd() + '/twitconfig');
 var writeTweets = function(){
   var searchParams = {q: "kanye", count: 100, result_type: "mixed"};
   T.get('search/tweets', searchParams, function(err, data) {
