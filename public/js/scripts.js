@@ -70,8 +70,7 @@
         datasets : [
           {
             fillColor : "rgba(22,22,22,0.1)",
-            strokeColor : "rgba(100,100,100,0.3)",
-            pointColor : "rgba(220,220,220,0.3)",
+            strokeColor : "rgba(100,100,100,0.2)",
             pointStrokeColor : "#444",
             data : this.data
           }
