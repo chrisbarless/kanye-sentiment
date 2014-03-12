@@ -1,5 +1,7 @@
 (function($, _, Backbone, undefined){
 
+  var is_firefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+
   var Tweet = Backbone.Model.extend();
   var Tweets = Backbone.Collection.extend({
     model: Tweet
@@ -117,7 +119,7 @@
         $frameInner = $('#frame-inner'),
         $frames = $frameInner.children(),
         fSize = {
-          width: 1180,
+          width: is_firefox ? 1275 : 1180,
           height: 902
         };
     this._mood = 100;
