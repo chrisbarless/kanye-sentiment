@@ -21,10 +21,10 @@ var writeTweets = function(){
         user: tweet.user.screen_name
       };
     });
-    tweets = newTweets.uniq(oldTweets.concat(newTweets), function(tweet){
+    tweets = _.uniq(oldTweets.concat(newTweets), function(tweet){
       return tweet.text;
     });
-    fs.writeFileSync(tweetFile, '\n' + JSON.stringify(tweets), { encoding: encoding });
+    fs.writeFileSync(tweetFile, JSON.stringify(tweets), { encoding: encoding });
     console.log('Wrote %d tweets', tweets.length);
   });
 };
