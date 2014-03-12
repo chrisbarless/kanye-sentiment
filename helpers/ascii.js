@@ -17,8 +17,8 @@ var canvas, ctx,
     chars = ['@', '#', '$', '=', '*', '!', ';', ':', '~', '-', ',', '.', '&nbsp;', '&nbsp;'],
     charLen = chars.length - 1;
 
-    dim.width = Math.floor(dim.width / 2);
-    dim.height = Math.floor(dim.height / 2);
+    dim.width = Math.floor(dim.width / 2.5);
+    dim.height = Math.floor(dim.height / 2.5);
 
 function newCanvas(){
   canvas = new Canvas(dim.width, dim.height);

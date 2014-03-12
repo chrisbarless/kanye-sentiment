@@ -49,8 +49,8 @@ html, body {
 
 .frames {
   display: none;
-  font-size: 9px;
-  line-height: 5px;
+  font-size: 11px;
+  line-height: 10px;
   transform-origin: 0 0;
   -webkit-transform-origin: 0 0;
   -moz-transform-origin: 0 0;
@@ -68,7 +68,7 @@ html, body {
   font-family: monospace;
   font-size: 14px;
   text-transform: uppercase;
-  background: rgba(255, 255, 255, 0.6); }
+  background: rgba(255, 255, 255, 0.7); }
   .tweet-data .bold {
     font-weight: bold; }
 
@@ -82,7 +82,7 @@ html, body {
   font-weight: bold;
   font-size: 14px;
   padding: 1em;
-  background: rgba(255, 255, 255, 0.6); }
+  background: rgba(255, 255, 255, 0.7); }
   .tweet-display p {
     line-height: 1.5; }
 
@@ -95,7 +95,7 @@ html, body {
   bottom: 20px;
   right: 2em;
   padding: 1em;
-  background: rgba(255, 255, 255, 0.6); }
+  background: rgba(255, 255, 255, 0.7); }
 
 .social {
   position: fixed;

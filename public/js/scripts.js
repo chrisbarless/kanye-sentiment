@@ -119,8 +119,8 @@
         $frameInner = $('#frame-inner'),
         $frames = $frameInner.children(),
         fSize = {
-          width: is_firefox ? 1275 : 1180,
-          height: 902
+          width: is_firefox ? 1245 : 1320,
+          height: is_firefox? 1402 : 1402
         };
     this._mood = 100;
     this.setMood = function(mood){
