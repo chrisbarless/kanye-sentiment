@@ -7,7 +7,14 @@ var fs = require('fs'),
 var oldTweets = fs.readFileSync(tweetFile);
 oldTweets = JSON.parse(oldTweets);
 
-var T = new Twit(require('../twitconfig'));
+var tweetConfig = process.env.ENVIRONMENT == 'production' ? {
+  CONSUMER_KEY: 'EDBivaJsQE7EI9dbAow',
+  CONSUMER_SECRET: 'mr8cOc3KwqIzZt2hZeshzJa5lpSTKXHFgRfDEBjbM',
+  ACCESS_TOKEN: '260941979-XDzDoSgYtYZD4bQirmpU6gDG2nhq2ehC7JccWxLj',
+  ACCESS_TOKEN_SECRET: 'VQQNReA9tVkAsFVVOMoU4D4ZhPUOhIlla5LHZuV8LIVbG'
+} || require('../twitconfig');
+
+var T = new Twit(tweetConfig);
 
 var writeTweets = function(){
   var searchParams = {q: "kanye", count: 100, result_type: "mixed"};
