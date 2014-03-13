@@ -60,7 +60,7 @@ html, body{
 }
 .chart-canvas-wrap{
     $height: 160px;
-    $width: 250px;
+    $width: 267px;
     height: $height;
     width: $width;
     overflow: hidden;
@@ -69,6 +69,7 @@ html, body{
     bottom: 20px;
     right: $body-padding;
     padding: 1em;
+    padding-left: .25em;
     @include transparent_bg;
 }
 .social{
