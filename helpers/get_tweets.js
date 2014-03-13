@@ -8,10 +8,10 @@ var oldTweets = fs.readFileSync(tweetFile);
 oldTweets = JSON.parse(oldTweets);
 
 var tweetConfig = process.env.ENVIRONMENT == 'production' ? {
-  CONSUMER_KEY: 'EDBivaJsQE7EI9dbAow',
-  CONSUMER_SECRET: 'mr8cOc3KwqIzZt2hZeshzJa5lpSTKXHFgRfDEBjbM',
-  ACCESS_TOKEN: '260941979-XDzDoSgYtYZD4bQirmpU6gDG2nhq2ehC7JccWxLj',
-  ACCESS_TOKEN_SECRET: 'VQQNReA9tVkAsFVVOMoU4D4ZhPUOhIlla5LHZuV8LIVbG'
+   consumer_key: process.env.CONSUMER_KEY,
+   consumer_secret: process.env.CONSUMER_SECRET,
+   access_token: process.env.ACCESS_TOKEN,
+   access_token_secret: process.env.ACCESS_TOKEN_SECRET
 } || require('../twitconfig');
 
 var T = new Twit(tweetConfig);
